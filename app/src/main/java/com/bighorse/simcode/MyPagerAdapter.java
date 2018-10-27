@@ -1,5 +1,6 @@
 package com.bighorse.simcode;
 
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
@@ -18,8 +19,20 @@ public class MyPagerAdapter extends FragmentStatePagerAdapter {
 
     @Override    public Fragment getItem(int position) {
         switch (position){
-            case 0: return SimFragment.newInstance(simList.get(0));
-            case 1: return SimFragment.newInstance(simList.get(1));
+            case 0: {
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("sim", simList.get(position));
+                SimFragment fragobj = new SimFragment();
+                fragobj.setArguments(bundle);
+                return fragobj;
+            }
+            case 1: {
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("sim", simList.get(position));
+                SimFragment fragobj = new SimFragment();
+                fragobj.setArguments(bundle);
+                return fragobj;
+            }
         }
         return null;
     }

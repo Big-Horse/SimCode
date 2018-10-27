@@ -1,6 +1,7 @@
 package com.bighorse.simcode;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,23 +10,18 @@ import android.widget.TextView;
 
 public class SimFragment extends Fragment {
     public static final String TAG = "SimFragment";
-    private static Sim mSim;
+    private Sim mSim;
     private TextView mPhoneNumberTextView;
     private TextView mOperatorTextView;
     private TextView mSimNumberOneTextView;
     private TextView mSimNumberTwoTextView;
 
-    public SimFragment(Sim sim){
-        mSim = sim;
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mSim = (Sim) getArguments().getSerializable("sim");
     }
-
-    public static Fragment newInstance(Sim sim) {
-
-        SimFragment view = new SimFragment(sim);
-
-        return view;
-    }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater,

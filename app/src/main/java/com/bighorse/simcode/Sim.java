@@ -1,9 +1,12 @@
 package com.bighorse.simcode;
 
+import android.os.Parcelable;
 import android.telephony.SubscriptionInfo;
 
+import java.io.Serializable;
 
-class Sim {
+
+class Sim implements Serializable {
 
     private String ICCID;
     private String IMEI;
