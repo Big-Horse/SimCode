@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements ActivityCompat.On
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tablayout);
         tabLayout.setupWithViewPager(mViewPager);
 
-        MobileAds.initialize(this, "ca-app-pub-5005687032079051~5324024505");
+        MobileAds.initialize(this, getResources().getString(R.string.admob_APP_Key));
 
         mAdView = findViewById(R.id.adView_banner);
         AdRequest adRequest = new AdRequest.Builder().build();

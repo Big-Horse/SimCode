@@ -23,11 +23,15 @@
             android:textSize="20dp"/>
 
 
+
     </android.support.v7.widget.Toolbar>
+
     <android.support.design.widget.TabLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/AppTabLayout"
+        app:tabGravity="fill"
+        app:tabMaxWidth="0dp"
         app:tabTextAppearance="@style/AppTabTextAppearance"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         android:id="@+id/tablayout"
@@ -39,6 +43,13 @@
     </android.support.design.widget.TabLayout>
 
 
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/tablayout"
+        app:layout_constraintBottom_toTopOf="@+id/adView_banner"
+        />
     <com.google.android.gms.ads.AdView
         xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:id="@+id/adView_banner"
@@ -48,18 +59,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-5005687032079051/3797274125"
+        ads:adUnitId="@string/banner_1_Key"
         android:elevation="5dp"
         >
         <!-- ca-app-pub-5005687032079051/3797274125 -->
     </com.google.android.gms.ads.AdView>
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/pager"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/tablayout"
-        />
+
 
 
 
