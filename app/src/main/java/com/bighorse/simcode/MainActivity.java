@@ -1,11 +1,15 @@
 package com.bighorse.simcode;
 
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,14 +17,18 @@ public class MainActivity extends AppCompatActivity {
 
     private ViewPager mViewPager;
     private MyPagerAdapter mMyPagerAdapter;
+    private List<Sim> mSimList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mViewPager = (ViewPager)findViewById(R.id.pager);
-        mMyPagerAdapter = new MyPagerAdapter(this);
+        mMyPagerAdapter = new MyPagerAdapter(getSupportFragmentManager());
         mViewPager.setAdapter(mMyPagerAdapter);
+        mSimList = new ArrayList<>();
+        mSimList.add(new Sim());
+        mMyPagerAdapter.addSimList(mSimList);
 
         MobileAds.initialize(this, "ca-app-pub-5005687032079051~5324024505");
 
