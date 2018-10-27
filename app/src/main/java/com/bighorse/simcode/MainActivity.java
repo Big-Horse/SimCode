@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mViewPager = (ViewPager)findViewById(R.id.pager);
-        mMyPagerAdapter = new MyPagerAdapter();
+        mMyPagerAdapter = new MyPagerAdapter(this);
         mViewPager.setAdapter(mMyPagerAdapter);
 
         MobileAds.initialize(this, "ca-app-pub-5005687032079051~5324024505");
