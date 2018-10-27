@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Codice Sim</string>
+    <string name="phone_number">Numero Telefonico</string>
+    <string name="operator_name">Nome Operatore</string>
+    <string name="serialNumber">Numero Seriale</string>
+    <string name="subscriberId">ID Subscriber</string>
+</resources>
