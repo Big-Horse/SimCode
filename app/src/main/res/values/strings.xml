@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">SimCode</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="operator_name">Operator Name</string>
+    <string name="serialNumber">Serial Number (ICCID)</string>
+    <string name="subscriberId">Subscriber ID (IMSI)</string>
 </resources>
