@@ -3,6 +3,7 @@ package com.bighorse.simcode;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import com.google.android.gms.ads.MobileAds;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,5 +17,7 @@ public class MainActivity extends AppCompatActivity {
         mViewPager = (ViewPager)findViewById(R.id.pager);
         mMyPagerAdapter = new MyPagerAdapter();
         mViewPager.setAdapter(mMyPagerAdapter);
+
+        MobileAds.initialize(this, "ca-app-pub-5005687032079051~5324024505");
     }
 }
