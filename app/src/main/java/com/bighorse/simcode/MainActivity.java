@@ -1,5 +1,6 @@
 package com.bighorse.simcode;
 
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -28,7 +29,11 @@ public class MainActivity extends AppCompatActivity {
         mViewPager.setAdapter(mMyPagerAdapter);
         mSimList = new ArrayList<>();
         mSimList.add(new Sim());
+        mSimList.add(new Sim());
         mMyPagerAdapter.addSimList(mSimList);
+
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tablayout);
+        tabLayout.setupWithViewPager(mViewPager);
 
         MobileAds.initialize(this, "ca-app-pub-5005687032079051~5324024505");
 

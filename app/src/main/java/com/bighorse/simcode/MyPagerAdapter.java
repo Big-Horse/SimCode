@@ -33,9 +33,13 @@ public class MyPagerAdapter extends FragmentStatePagerAdapter {
     public CharSequence getPageTitle(int position) {
         switch (position) {
             case 0:
-                return "Sim 1";
+                if(simList.size() == 1){
+                    return "SIM";
+                } else {
+                    return "SIM 1";
+                }
             case 1:
-                return "Sim 2";
+                return "SIM 2";
             default:
                 return null;
         }
