@@ -15,9 +15,15 @@ public class SimFragment extends Fragment {
     private TextView mSimNumberOneTextView;
     private TextView mSimNumberTwoTextView;
 
-    public static Fragment newInstance(Sim sim) {
+    public SimFragment(Sim sim){
         mSim = sim;
-        return new SimFragment();
+    }
+
+    public static Fragment newInstance(Sim sim) {
+
+        SimFragment view = new SimFragment(sim);
+
+        return view;
     }
 
 

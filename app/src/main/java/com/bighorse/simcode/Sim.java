@@ -10,11 +10,11 @@ class Sim {
     private String operatorName;
     private String phoneNumber;
 
-    public Sim(SubscriptionInfo info) {
-        ICCID = info.getIccId();
-        IMEI = String.valueOf(info.getMnc());
-        operatorName = String.valueOf(info.getCarrierName());
-        phoneNumber = info.getNumber();
+    public Sim(SubscriptionInfo infoSim) {
+        ICCID = infoSim.getIccId();
+        IMEI = String.valueOf(infoSim.getMnc());
+        operatorName = String.valueOf(infoSim.getCarrierName());
+        phoneNumber = infoSim.getNumber();
     }
 
     void Sim(String ICCID, String IMEI, String operatorName, String phoneNumber){

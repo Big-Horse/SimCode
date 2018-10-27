@@ -28,6 +28,8 @@ class SimUtils {
             SubscriptionInfo infoSim2 = sManager.getActiveSubscriptionInfoForSimSlotIndex(1);
             simsList.add(new Sim(infoSim1));
             simsList.add(new Sim(infoSim2));
+
+            int a = 5;
         }else{
 
         }

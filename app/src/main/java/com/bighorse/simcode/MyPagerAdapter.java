@@ -10,9 +10,9 @@ import java.util.List;
 
 public class MyPagerAdapter extends FragmentStatePagerAdapter {
 
-    List<Sim> simList = new ArrayList();
+    private List<Sim> simList = new ArrayList();
 
-    public MyPagerAdapter(FragmentManager fm) {
+    MyPagerAdapter(FragmentManager fm) {
         super(fm);
     }
 
