@@ -24,12 +24,18 @@ class SimUtils {
                 // TODO: Consider calling
             }
 
+            TelephonyManager tm = (TelephonyManager)
+                    context.getSystemService(Context.TELEPHONY_SERVICE);
+            String simID = tm.getSimSerialNumber();
+            String telNumber = tm.getLine1Number();
+            String IMEI = tm.getDeviceId();
+            String operator = tm.getNetworkOperatorName();
+
             SubscriptionInfo infoSim1 = sManager.getActiveSubscriptionInfoForSimSlotIndex(0);
             SubscriptionInfo infoSim2 = sManager.getActiveSubscriptionInfoForSimSlotIndex(1);
             simsList.add(new Sim(infoSim1));
             simsList.add(new Sim(infoSim2));
 
-            int a = 5;
         }else{
 
         }
