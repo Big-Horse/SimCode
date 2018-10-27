@@ -34,10 +34,6 @@ public class MainActivity extends AppCompatActivity implements ActivityCompat.On
         mViewPager = (ViewPager)findViewById(R.id.pager);
         mMyPagerAdapter = new MyPagerAdapter(getSupportFragmentManager());
         mViewPager.setAdapter(mMyPagerAdapter);
-        mSimList = new ArrayList<>();
-        mSimList.add(new Sim());
-        mSimList.add(new Sim());
-        mMyPagerAdapter.addSimList(mSimList);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tablayout);
         tabLayout.setupWithViewPager(mViewPager);
@@ -81,8 +77,6 @@ public class MainActivity extends AppCompatActivity implements ActivityCompat.On
     public void initPager(){
         mSimList = new ArrayList<>();
         mSimList = SimUtils.getSimsInfos(this);
-
-        mSimList.add(new Sim());
         mMyPagerAdapter.addSimList(mSimList);
     }
 }

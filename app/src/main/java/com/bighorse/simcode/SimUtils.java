@@ -26,6 +26,8 @@ class SimUtils {
 
             SubscriptionInfo infoSim1 = sManager.getActiveSubscriptionInfoForSimSlotIndex(0);
             SubscriptionInfo infoSim2 = sManager.getActiveSubscriptionInfoForSimSlotIndex(1);
+            simsList.add(new Sim(infoSim1));
+            simsList.add(new Sim(infoSim2));
         }else{
 
         }
