@@ -35,10 +35,10 @@ public class SimFragment extends Fragment {
         mSimNumberOneTextView = (TextView) rootView.findViewById(R.id.sim_number_description_text_view);
         mSimNumberTwoTextView = (TextView) rootView.findViewById(R.id.sim_number_description_two_text_view);
 
-        mPhoneNumberTextView.setText(mSim.getPhoneNumber());
-        mOperatorTextView.setText(mSim.getOperatorName());
-        mSimNumberOneTextView.setText(mSim.getICCID());
-        mSimNumberTwoTextView.setText(mSim.getIMEI());
+        mPhoneNumberTextView.setText(mSim.phoneNumber);
+        mOperatorTextView.setText(mSim.operatorName);
+        mSimNumberOneTextView.setText(mSim.ICCID);
+        mSimNumberTwoTextView.setText(mSim.IMSI);
         return rootView;
     }
 }
