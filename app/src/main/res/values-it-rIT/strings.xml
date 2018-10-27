@@ -3,6 +3,6 @@
     <string name="app_name">Codice Sim</string>
     <string name="phone_number">Numero Telefonico</string>
     <string name="operator_name">Nome Operatore</string>
-    <string name="serialNumber">Numero Seriale</string>
-    <string name="subscriberId">ID Subscriber</string>
+    <string name="serialNumber">Numero Seriale (ICCID)</string>
+    <string name="subscriberId">ID Subscriber (IMSI)</string>
 </resources>
