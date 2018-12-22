@@ -62,4 +62,5 @@ public class MyPagerAdapter extends FragmentStatePagerAdapter {
         simList.addAll(sims);
         notifyDataSetChanged();
     }
+
 }
